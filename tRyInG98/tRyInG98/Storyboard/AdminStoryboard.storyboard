@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qCn-Wh-xkj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Admin Home-->
+        <scene sceneID="HbC-32-vBq">
+            <objects>
+                <viewController storyboardIdentifier="AdminHomeViewController" id="Tms-jJ-lTf" customClass="AdminHomeViewController" customModule="tRyInG98" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBB-pu-ogd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="xcz-k2-JIl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWJ-bf-0Hd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
+                                        <state key="normal" title="Add Thesis">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Odb-ky-fH1" kind="show" id="mKg-XF-9Np"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZT-hY-JCW">
+                                        <rect key="frame" x="0.0" y="221" width="375" height="161"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4br-Rb-VKm">
+                                        <rect key="frame" x="0.0" y="442" width="375" height="161"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jgg-Aq-rhl" firstAttribute="bottom" secondItem="xcz-k2-JIl" secondAttribute="bottom" id="BFS-aa-l5p"/>
+                            <constraint firstItem="xcz-k2-JIl" firstAttribute="top" secondItem="Jgg-Aq-rhl" secondAttribute="top" id="P7G-h3-UHF"/>
+                            <constraint firstItem="Jgg-Aq-rhl" firstAttribute="trailing" secondItem="xcz-k2-JIl" secondAttribute="trailing" id="jaI-tX-bac"/>
+                            <constraint firstItem="xcz-k2-JIl" firstAttribute="leading" secondItem="Jgg-Aq-rhl" secondAttribute="leading" id="unz-gi-mTQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jgg-Aq-rhl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Admin Home" id="j6k-XD-R7F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIJ-vj-vZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="1000"/>
+        </scene>
+        <!--Add Thesis View Controller-->
+        <scene sceneID="H4y-cQ-2TE">
+            <objects>
+                <viewController id="Odb-ky-fH1" customClass="AddThesisViewController" customModule="tRyInG98" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UOl-tS-pxT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title Of The Thesis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9X-JM-Jyw" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="84" width="343" height="51"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTs-ky-XEz" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="143" width="343" height="51"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Course" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-c9-p2h" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="202" width="343" height="51"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Jf-ST-33f" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="261" width="343" height="51"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-Iu-ZIQ" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="320" width="343" height="51"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ThesisID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ac-FA-1Ft" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="379" width="343" height="51"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nopic" translatesAutoresizingMaskIntoConstraints="NO" id="jrP-Kk-bxG">
+                                <rect key="frame" x="37" y="443" width="301" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bct-nx-5Qj">
+                                <rect key="frame" x="230" y="609" width="101" height="32"/>
+                                <state key="normal" title="Upload" backgroundImage="button-01 2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddThesis:" destination="Odb-ky-fH1" eventType="touchUpInside" id="xjc-vC-9QP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diy-6a-fB4">
+                                <rect key="frame" x="47" y="609" width="100" height="32"/>
+                                <state key="normal" title="Choose" backgroundImage="button-01 2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="UploadPic:" destination="Odb-ky-fH1" eventType="touchUpInside" id="HqE-RU-mNZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z9X-JM-Jyw" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="16" id="2Jx-f3-sLt"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="Bct-nx-5Qj" secondAttribute="trailing" constant="44" id="4uA-OU-xfm"/>
+                            <constraint firstItem="iTp-Iu-ZIQ" firstAttribute="top" secondItem="6dX-Wo-bLu" secondAttribute="top" constant="256" id="73J-tW-h79"/>
+                            <constraint firstItem="Bct-nx-5Qj" firstAttribute="top" secondItem="jrP-Kk-bxG" secondAttribute="bottom" constant="16" id="7vT-94-54R"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="5Ac-FA-1Ft" secondAttribute="bottom" constant="237" id="Blk-Av-toQ"/>
+                            <constraint firstItem="5Ac-FA-1Ft" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="16" id="Hyq-98-7Rd"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="5Ac-FA-1Ft" secondAttribute="trailing" constant="16" id="J1X-YW-SnN"/>
+                            <constraint firstItem="jrP-Kk-bxG" firstAttribute="top" secondItem="6dX-Wo-bLu" secondAttribute="top" constant="379" id="LPD-QG-bvW"/>
+                            <constraint firstItem="diy-6a-fB4" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="47" id="OXP-h4-Rtl"/>
+                            <constraint firstItem="iTp-Iu-ZIQ" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="16" id="Ohc-UE-hnC"/>
+                            <constraint firstItem="Z9X-JM-Jyw" firstAttribute="top" secondItem="6dX-Wo-bLu" secondAttribute="top" constant="20" id="PSc-JO-WiW"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="iTp-Iu-ZIQ" secondAttribute="bottom" constant="296" id="QAT-QZ-gNg"/>
+                            <constraint firstItem="KTs-ky-XEz" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="16" id="QFQ-lk-QMo"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="Bct-nx-5Qj" secondAttribute="bottom" constant="26" id="THN-PL-Zhz"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="9GB-c9-p2h" secondAttribute="trailing" constant="16" id="U2J-Jr-1tM"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="KTs-ky-XEz" secondAttribute="trailing" constant="16" id="W7N-5f-huv"/>
+                            <constraint firstItem="diy-6a-fB4" firstAttribute="top" secondItem="iTp-Iu-ZIQ" secondAttribute="bottom" constant="238" id="Zp7-VM-7i5"/>
+                            <constraint firstItem="Bct-nx-5Qj" firstAttribute="leading" secondItem="diy-6a-fB4" secondAttribute="trailing" constant="83" id="bK8-L9-IqK"/>
+                            <constraint firstItem="9GB-c9-p2h" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="16" id="cor-Vu-etN"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="8Jf-ST-33f" secondAttribute="trailing" constant="16" id="e6I-Td-Mpf"/>
+                            <constraint firstItem="jrP-Kk-bxG" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="37" id="fKW-WW-0mV"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="Z9X-JM-Jyw" secondAttribute="bottom" constant="532" id="h2u-EF-ihF"/>
+                            <constraint firstItem="KTs-ky-XEz" firstAttribute="top" secondItem="Z9X-JM-Jyw" secondAttribute="bottom" constant="8" id="hnI-8M-6Sn"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="diy-6a-fB4" secondAttribute="trailing" constant="228" id="i9I-GC-4Qv"/>
+                            <constraint firstItem="8Jf-ST-33f" firstAttribute="top" secondItem="6dX-Wo-bLu" secondAttribute="top" constant="197" id="iPu-1B-XfF"/>
+                            <constraint firstItem="9GB-c9-p2h" firstAttribute="top" secondItem="6dX-Wo-bLu" secondAttribute="top" constant="138" id="jAn-Y5-HeZ"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="9GB-c9-p2h" secondAttribute="bottom" constant="414" id="mdB-Rr-h5y"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="iTp-Iu-ZIQ" secondAttribute="trailing" constant="16" id="mhZ-Mb-9VQ"/>
+                            <constraint firstItem="8Jf-ST-33f" firstAttribute="leading" secondItem="6dX-Wo-bLu" secondAttribute="leading" constant="16" id="nzl-DI-Heq"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="jrP-Kk-bxG" secondAttribute="trailing" constant="37" id="obJ-G7-b85"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="KTs-ky-XEz" secondAttribute="bottom" constant="473" id="pcx-dM-7d9"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="diy-6a-fB4" secondAttribute="bottom" constant="26" id="qHB-Fb-D3l"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="jrP-Kk-bxG" secondAttribute="bottom" constant="74" id="qkf-qV-Gd6"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="bottom" secondItem="8Jf-ST-33f" secondAttribute="bottom" constant="355" id="xEI-Nf-Sct"/>
+                            <constraint firstItem="5Ac-FA-1Ft" firstAttribute="top" secondItem="6dX-Wo-bLu" secondAttribute="top" constant="315" id="yxR-BH-S0C"/>
+                            <constraint firstItem="6dX-Wo-bLu" firstAttribute="trailing" secondItem="Z9X-JM-Jyw" secondAttribute="trailing" constant="16" id="zXv-bf-fO5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6dX-Wo-bLu"/>
+                    </view>
+                    <connections>
+                        <outlet property="AuthorTextField" destination="KTs-ky-XEz" id="w8u-sr-d4n"/>
+                        <outlet property="CourseTextField" destination="9GB-c9-p2h" id="aei-0V-Ofb"/>
+                        <outlet property="DescriptionTextField" destination="iTp-Iu-ZIQ" id="TrG-dv-162"/>
+                        <outlet property="ThesisIDTextField" destination="5Ac-FA-1Ft" id="EHb-XS-NVZ"/>
+                        <outlet property="TitleTextField" destination="Z9X-JM-Jyw" id="n8a-BV-UyO"/>
+                        <outlet property="YearTextField" destination="8Jf-ST-33f" id="0EJ-oK-P3K"/>
+                        <outlet property="imageViewAddBook" destination="jrP-Kk-bxG" id="CbF-VC-PZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWt-PV-PBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2793" y="1000"/>
+        </scene>
+        <!--Nav View Controller-->
+        <scene sceneID="kNW-oJ-wHy">
+            <objects>
+                <navigationController storyboardIdentifier="HomeAdmin" automaticallyAdjustsScrollViewInsets="NO" id="qCn-Wh-xkj" customClass="NavViewController" customModule="tRyInG98" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qvL-2N-Tof">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tms-jJ-lTf" kind="relationship" relationship="rootViewController" id="Onn-CJ-uqX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DpI-w3-ChF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="1000"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-01 2" width="430" height="134"/>
+        <image name="nopic" width="300" height="400"/>
+    </resources>
+</document>
