@@ -73,7 +73,7 @@ class ThesisInfoViewController: UIViewController {
     
     
     func LoadUserData(){
-        Database.database().reference().child("\(uid!)").observe(.value) { (snapshot) in
+        Database.database().reference().child("Users").child("\(uid!)").observe(.value) { (snapshot) in
             if let dict = snapshot.value as? [String: AnyObject]{
                 let MatricNo = dict["MatricID"] as! String
                 print("My matric Number is: \(MatricNo)")
@@ -99,7 +99,7 @@ class ThesisInfoViewController: UIViewController {
         let values = ["BookID": ThesisID, "BookTitle": ThesisTitle, "DateBorrowed": BorrowedDate, "DateReturn": returnDate, "MatricID": MatricID, "UID": uid!] as [String : Any]
         Database.database().reference().child("Thesis_Borrowed").childByAutoId().updateChildValues(values, withCompletionBlock: { (error, ref) in
             
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
             let alertController = UIAlertController(title: "Borrow Thesis", message: "your have successfully borrowed a Thesis!", preferredStyle: .alert)
             
             // Create the actions

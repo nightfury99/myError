@@ -39,7 +39,7 @@ class AddThesisViewController: UIViewController, UIImagePickerControllerDelegate
         guard let ThesisID = ThesisIDTextField.text else {return}
         
         //let ThesisIDConvert = Int(ThesisID)
-        let ThesisNum = 2
+        let ThesisNum = 1
         let FilePath = "\(String(describing: Auth.auth().currentUser))/\(Date.timeIntervalSinceReferenceDate)"
         let StorageRef = Storage.storage().reference().child(FilePath)
         let UploadData = imageViewAddBook.image?.pngData()
@@ -100,7 +100,7 @@ class AddThesisViewController: UIViewController, UIImagePickerControllerDelegate
                 print("Failed to update database values with error: ", error.localizedDescription)
                 return
             }
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
             print("Succesfully Add Thesis")
         }
     }

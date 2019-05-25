@@ -45,7 +45,7 @@ class AdminDeleteViewController: UIViewController {
                     let ThesisURL = ChatObject?["ThesisURL"] as? String
                     
                     let List = DeleteThesis(Id: Id, Title: Title ?? "", Author: Author ?? "", Year: Year ?? "", Course: Course ?? "", ThesisURL: ThesisURL ?? "")
-                    print("Test URL: \(ThesisURL ?? "")")
+                    //print("Test URL: \(ThesisURL ?? "")")
                     self.ThesisS.append(List)
                 }
                 self.thesisTableView.reloadData()
