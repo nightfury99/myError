@@ -24,6 +24,12 @@
 		5251DBFC229163920015D388 /* Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5251DBFB229163920015D388 /* Bold.ttf */; };
 		5251DBFF229163A10015D388 /* Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5251DBFD229163A10015D388 /* Light.ttf */; };
 		5251DC00229163A10015D388 /* Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5251DBFE229163A10015D388 /* Regular.ttf */; };
+		52528EB82298C80E00023107 /* AdminApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528EB72298C80E00023107 /* AdminApprovalViewController.swift */; };
+		52528EBA2298D6F900023107 /* RequestedUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528EB92298D6F900023107 /* RequestedUserTableViewCell.swift */; };
+		52528EBC2298D71700023107 /* RequestedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528EBB2298D71700023107 /* RequestedUser.swift */; };
+		52528EC02298FF8B00023107 /* AdminDeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528EBF2298FF8B00023107 /* AdminDeleteTableViewCell.swift */; };
+		52528EC22298FFDF00023107 /* AdminDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528EC12298FFDF00023107 /* AdminDeleteViewController.swift */; };
+		52528EC42299014F00023107 /* DeleteThesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528EC32299014F00023107 /* DeleteThesis.swift */; };
 		5253C9C42292521700B1C16F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253C9C32292521700B1C16F /* HomeViewController.swift */; };
 		5253C9C62292843A00B1C16F /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253C9C52292843A00B1C16F /* AdminHomeViewController.swift */; };
 		52716C682281D16000B6EE45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52716C672281D16000B6EE45 /* GoogleService-Info.plist */; };
@@ -50,6 +56,12 @@
 		5251DBFB229163920015D388 /* Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bold.ttf; sourceTree = "<group>"; };
 		5251DBFD229163A10015D388 /* Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Light.ttf; sourceTree = "<group>"; };
 		5251DBFE229163A10015D388 /* Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Regular.ttf; sourceTree = "<group>"; };
+		52528EB72298C80E00023107 /* AdminApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminApprovalViewController.swift; sourceTree = "<group>"; };
+		52528EB92298D6F900023107 /* RequestedUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestedUserTableViewCell.swift; sourceTree = "<group>"; };
+		52528EBB2298D71700023107 /* RequestedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestedUser.swift; sourceTree = "<group>"; };
+		52528EBF2298FF8B00023107 /* AdminDeleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDeleteTableViewCell.swift; sourceTree = "<group>"; };
+		52528EC12298FFDF00023107 /* AdminDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDeleteViewController.swift; sourceTree = "<group>"; };
+		52528EC32299014F00023107 /* DeleteThesis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteThesis.swift; sourceTree = "<group>"; };
 		5253C9C32292521700B1C16F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5253C9C52292843A00B1C16F /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
 		52716C672281D16000B6EE45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -109,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				524E08E92292E8EE0035355E /* Storyboard */,
+				52528EBE2298FF5700023107 /* Admin Delete */,
+				52528EBD2298F92800023107 /* Admin Approval */,
 				524ED279229532EC00044427 /* ThesisInfo */,
 				524ED2742294F52D00044427 /* TableView */,
 				524E08E82292E8DB0035355E /* Admin */,
@@ -118,7 +132,6 @@
 				5251DBF822915AEB0015D388 /* NavViewController.swift */,
 				524D04D2225315DC009D49F4 /* ViewController.swift */,
 				5253C9C32292521700B1C16F /* HomeViewController.swift */,
-				52F1A98D2291260B00B59B62 /* Main.storyboard */,
 				524D04D7225315DD009D49F4 /* Assets.xcassets */,
 				524D04D9225315DD009D49F4 /* LaunchScreen.storyboard */,
 				52716C672281D16000B6EE45 /* GoogleService-Info.plist */,
@@ -140,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				524E08EA2292EC6F0035355E /* AdminStoryboard.storyboard */,
+				52F1A98D2291260B00B59B62 /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -170,6 +184,26 @@
 				5251DBFB229163920015D388 /* Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52528EBD2298F92800023107 /* Admin Approval */ = {
+			isa = PBXGroup;
+			children = (
+				52528EB72298C80E00023107 /* AdminApprovalViewController.swift */,
+				52528EB92298D6F900023107 /* RequestedUserTableViewCell.swift */,
+				52528EBB2298D71700023107 /* RequestedUser.swift */,
+			);
+			path = "Admin Approval";
+			sourceTree = "<group>";
+		};
+		52528EBE2298FF5700023107 /* Admin Delete */ = {
+			isa = PBXGroup;
+			children = (
+				52528EC12298FFDF00023107 /* AdminDeleteViewController.swift */,
+				52528EBF2298FF8B00023107 /* AdminDeleteTableViewCell.swift */,
+				52528EC32299014F00023107 /* DeleteThesis.swift */,
+			);
+			path = "Admin Delete";
 			sourceTree = "<group>";
 		};
 		52716C6D228D68D500B6EE45 /* LoginRegister */ = {
@@ -321,16 +355,22 @@
 			files = (
 				524ED27B2295332600044427 /* ThesisInfoViewController.swift in Sources */,
 				524E08ED2292FAA90035355E /* AddThesisViewController.swift in Sources */,
+				52528EBA2298D6F900023107 /* RequestedUserTableViewCell.swift in Sources */,
 				522E3C562291397F0055CD5D /* LoginViewController.swift in Sources */,
 				5251DBF922915AEB0015D388 /* NavViewController.swift in Sources */,
 				524ED2712294E95C00044427 /* ThesisListScreenViewController.swift in Sources */,
 				524D04D3225315DC009D49F4 /* ViewController.swift in Sources */,
 				524ED2782294F7DC00044427 /* ThesisImage.swift in Sources */,
+				52528EC02298FF8B00023107 /* AdminDeleteTableViewCell.swift in Sources */,
+				52528EB82298C80E00023107 /* AdminApprovalViewController.swift in Sources */,
 				524D04D1225315DC009D49F4 /* AppDelegate.swift in Sources */,
 				5253C9C62292843A00B1C16F /* AdminHomeViewController.swift in Sources */,
+				52528EC42299014F00023107 /* DeleteThesis.swift in Sources */,
 				524ED2762294F58400044427 /* ThesisListTableViewCell.swift in Sources */,
 				522E3C58229146130055CD5D /* RegisterViewController.swift in Sources */,
 				5253C9C42292521700B1C16F /* HomeViewController.swift in Sources */,
+				52528EBC2298D71700023107 /* RequestedUser.swift in Sources */,
+				52528EC22298FFDF00023107 /* AdminDeleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

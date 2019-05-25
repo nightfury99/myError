@@ -39,7 +39,7 @@ class AddThesisViewController: UIViewController, UIImagePickerControllerDelegate
         guard let ThesisID = ThesisIDTextField.text else {return}
         
         //let ThesisIDConvert = Int(ThesisID)
-        let ThesisNum = 1
+        let ThesisNum = 2
         let FilePath = "\(String(describing: Auth.auth().currentUser))/\(Date.timeIntervalSinceReferenceDate)"
         let StorageRef = Storage.storage().reference().child(FilePath)
         let UploadData = imageViewAddBook.image?.pngData()

@@ -96,11 +96,11 @@ class ThesisInfoViewController: UIViewController {
         print(sevenDaysAfter!)
         let returnDate = formatter.string(from: sevenDaysAfter!)
         
-        let values = ["BookID": ThesisID, "BookTitle": ThesisTitle, "DateBorrowed": BorrowedDate, "DateReturn": returnDate, "MSUID": MatricID, "UID": uid!] as [String : Any]
-        Database.database().reference().child("Book_Borrowed").childByAutoId().updateChildValues(values, withCompletionBlock: { (error, ref) in
+        let values = ["BookID": ThesisID, "BookTitle": ThesisTitle, "DateBorrowed": BorrowedDate, "DateReturn": returnDate, "MatricID": MatricID, "UID": uid!] as [String : Any]
+        Database.database().reference().child("Thesis_Borrowed").childByAutoId().updateChildValues(values, withCompletionBlock: { (error, ref) in
             
             self.dismiss(animated: true, completion: nil)
-            let alertController = UIAlertController(title: "Borrow Book", message: "your have successfully borrowed a book!", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Borrow Thesis", message: "your have successfully borrowed a Thesis!", preferredStyle: .alert)
             
             // Create the actions
             let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
@@ -120,7 +120,8 @@ class ThesisInfoViewController: UIViewController {
     
     
     
-    @IBAction func BorrowButon(_ sender: UIButton) {
+   
+    @IBAction func BorrowButton(_ sender: UIButton) {
         if ThesisNum <= 0{
             let AlertController = UIAlertController(title: "No Thesis Currently Available", message: "You Can Reserve Thesis", preferredStyle: .alert)
             let Cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) { (UIAlertAction) in
@@ -155,29 +156,24 @@ class ThesisInfoViewController: UIViewController {
         Alert.addAction(Cancel)
         Alert.addAction(Reserve)
         present(Alert, animated: true, completion: nil)
-        
-        
     }
     
     
     
     
     func BorrowThesis(){
-        
-        let dataref = Database.database().reference().child("Thesis").child(ThesisId)
+        let dataref = Database.database().reference().child("Thesis").child("\(ThesisId)")
         dataref.observeSingleEvent(of: .value) {
             (snapshot) in
             print (snapshot)
             if let dict = snapshot.value as? [String: AnyObject]
             {
                 
-                if  let numOfThesis = dict["Number_of_Thesis"] as? Int {
+                if  let numOfThesis = dict["ThesisNum"] as? Int {
                     print ("num of book :\(numOfThesis)")
                     let numofBooksAfterClicked = (numOfThesis - 1)
-                    dataref.updateChildValues(["Number_of_Thesis": numofBooksAfterClicked])
-                    //self.numOfBooks.text = String(numofBooksAfterClicked)
+                    dataref.updateChildValues(["ThesisNum": numofBooksAfterClicked])
                     
-                   // self.AddUserToThesisDatabase(bookTitle: self.titleLabel.text!, msuID: "\(self.msuid)", bookid: self.bookID, bookurl: self.bookURLL, bookLocc: self.bookLocc)
                     self.AddUserToThesisDatabase(ThesisTitle: self.TitleLabel.text!, MatricID: "\(self.MatricNum)", ThesisID: self.ThesisId, ThesisURL: self.ThesisUrl)
                 }
             }
