@@ -149,9 +149,11 @@ extension ThesisListScreenViewController: UITableViewDelegate, UITableViewDataSo
         Detail = self.ThesisS[indexPath.row]
         ref.child("Thesis").child("\(Detail.Id)")
         let firstVCDATA = Detail.Id
-        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "admin", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "ThesisInfo") as! ThesisInfoViewController
         desVC.ThesisId = firstVCDATA
         self.navigationController?.pushViewController(desVC, animated: true)
     }
+    
+    
 }

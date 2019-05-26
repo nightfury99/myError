@@ -32,6 +32,9 @@
 		52528ECE22994D1000023107 /* AdminViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528ECD22994D1000023107 /* AdminViewTableViewCell.swift */; };
 		52528ED022994D2F00023107 /* AdminReservedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528ECF22994D2F00023107 /* AdminReservedViewController.swift */; };
 		52528ED222994D4100023107 /* AdminReservedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52528ED122994D4100023107 /* AdminReservedView.swift */; };
+		52531061229A914F0053287B /* UserReservedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52531060229A914F0053287B /* UserReservedViewController.swift */; };
+		52531063229A91700053287B /* UserReservedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52531062229A91700053287B /* UserReservedTableViewCell.swift */; };
+		52531065229A91820053287B /* UserReserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52531064229A91820053287B /* UserReserved.swift */; };
 		5253C9C42292521700B1C16F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253C9C32292521700B1C16F /* HomeViewController.swift */; };
 		5253C9C62292843A00B1C16F /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253C9C52292843A00B1C16F /* AdminHomeViewController.swift */; };
 		52716C682281D16000B6EE45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52716C672281D16000B6EE45 /* GoogleService-Info.plist */; };
@@ -68,6 +71,9 @@
 		52528ECD22994D1000023107 /* AdminViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewTableViewCell.swift; sourceTree = "<group>"; };
 		52528ECF22994D2F00023107 /* AdminReservedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminReservedViewController.swift; sourceTree = "<group>"; };
 		52528ED122994D4100023107 /* AdminReservedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminReservedView.swift; sourceTree = "<group>"; };
+		52531060229A914F0053287B /* UserReservedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReservedViewController.swift; sourceTree = "<group>"; };
+		52531062229A91700053287B /* UserReservedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReservedTableViewCell.swift; sourceTree = "<group>"; };
+		52531064229A91820053287B /* UserReserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReserved.swift; sourceTree = "<group>"; };
 		5253C9C32292521700B1C16F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5253C9C52292843A00B1C16F /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
 		52716C672281D16000B6EE45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 		524D04CF225315DC009D49F4 /* tRyInG98 */ = {
 			isa = PBXGroup;
 			children = (
+				5253105F229A912D0053287B /* UserViewResrved */,
 				524E08E92292E8EE0035355E /* Storyboard */,
 				52528ECC22994CF000023107 /* adminViewReserved */,
 				52528EBE2298FF5700023107 /* Admin Delete */,
@@ -224,6 +231,16 @@
 				52528ED122994D4100023107 /* AdminReservedView.swift */,
 			);
 			path = adminViewReserved;
+			sourceTree = "<group>";
+		};
+		5253105F229A912D0053287B /* UserViewResrved */ = {
+			isa = PBXGroup;
+			children = (
+				52531060229A914F0053287B /* UserReservedViewController.swift */,
+				52531062229A91700053287B /* UserReservedTableViewCell.swift */,
+				52531064229A91820053287B /* UserReserved.swift */,
+			);
+			path = UserViewResrved;
 			sourceTree = "<group>";
 		};
 		52716C6D228D68D500B6EE45 /* LoginRegister */ = {
@@ -380,6 +397,8 @@
 				52528ECE22994D1000023107 /* AdminViewTableViewCell.swift in Sources */,
 				524ED27B2295332600044427 /* ThesisInfoViewController.swift in Sources */,
 				524E08ED2292FAA90035355E /* AddThesisViewController.swift in Sources */,
+				52531065229A91820053287B /* UserReserved.swift in Sources */,
+				52531061229A914F0053287B /* UserReservedViewController.swift in Sources */,
 				52528EBA2298D6F900023107 /* RequestedUserTableViewCell.swift in Sources */,
 				522E3C562291397F0055CD5D /* LoginViewController.swift in Sources */,
 				52B43F33229A52720096DD16 /* MyCell.swift in Sources */,
@@ -396,6 +415,7 @@
 				522E3C58229146130055CD5D /* RegisterViewController.swift in Sources */,
 				52528ED022994D2F00023107 /* AdminReservedViewController.swift in Sources */,
 				52528ED222994D4100023107 /* AdminReservedView.swift in Sources */,
+				52531063229A91700053287B /* UserReservedTableViewCell.swift in Sources */,
 				5253C9C42292521700B1C16F /* HomeViewController.swift in Sources */,
 				52528EBC2298D71700023107 /* RequestedUser.swift in Sources */,
 				52528EC22298FFDF00023107 /* AdminDeleteViewController.swift in Sources */,

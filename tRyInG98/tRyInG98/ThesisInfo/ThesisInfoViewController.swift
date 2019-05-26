@@ -150,6 +150,19 @@ class ThesisInfoViewController: UIViewController {
             guard let DateReserved = Alert.textFields?.first?.text else {return}
             let UserThesisBorrowValues = ["DateReserved": DateReserved, "ThesisTitle": self.ThesisTitle, "MatricID": self.MatricNum, "ThesisURL": self.ThesisUrl]
             Database.database().reference().child("ReservedThesis").childByAutoId().setValue(UserThesisBorrowValues)
+            
+            let alertController = UIAlertController(title: "Reserved Thesis", message: "your have successfully reserved a Thesis!", preferredStyle: .alert)
+            
+            // Create the actions
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            }
+            
+            // Add the actions
+            alertController.addAction(okAction)
+            
+            // Present the controller
+            self.present(alertController, animated: true, completion: nil)
         }
         Alert.addAction(Cancel)
         Alert.addAction(Reserve)

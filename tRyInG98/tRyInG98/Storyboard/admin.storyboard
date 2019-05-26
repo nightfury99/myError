@@ -134,7 +134,7 @@
         <!--Reserved Thesis-->
         <scene sceneID="ZnX-wN-bsM">
             <objects>
-                <viewController id="CU7-zQ-BcO" sceneMemberID="viewController">
+                <viewController id="CU7-zQ-BcO" customClass="UserReservedViewController" customModule="tRyInG98" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qL-0y-FVF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="118" id="JEs-3d-ChN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserReservedIdentifier" rowHeight="118" id="JEs-3d-ChN" customClass="UserReservedTableViewCell" customModule="tRyInG98" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JEs-3d-ChN" id="dHk-R2-Jis">
@@ -153,14 +153,14 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09Q-Ox-49w">
                                                     <rect key="frame" x="5" y="12" width="143" height="80"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hv-Xv-5T1">
-                                                    <rect key="frame" x="156" y="50.5" width="204" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSf-hq-oBt">
+                                                    <rect key="frame" x="156" y="17" width="204" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSf-hq-oBt">
-                                                    <rect key="frame" x="156" y="17" width="204" height="17.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hv-Xv-5T1">
+                                                    <rect key="frame" x="156" y="50.5" width="204" height="17"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -189,8 +189,18 @@
                                                 <constraint firstItem="1Hv-Xv-5T1" firstAttribute="leading" secondItem="S05-Hg-8KR" secondAttribute="leading" id="o20-di-AK6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userViewDateLabel" destination="S05-Hg-8KR" id="Kix-H4-FyP"/>
+                                            <outlet property="userViewImage" destination="09Q-Ox-49w" id="Sa8-kI-1WR"/>
+                                            <outlet property="userViewMatricIdLabel" destination="1Hv-Xv-5T1" id="hwl-Br-MmX"/>
+                                            <outlet property="userViewTitleLabel" destination="dSf-hq-oBt" id="HZc-iq-Tvf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CU7-zQ-BcO" id="l48-lD-Dkv"/>
+                                    <outlet property="delegate" destination="CU7-zQ-BcO" id="Xdd-As-4an"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,6 +213,9 @@
                         <viewLayoutGuide key="safeArea" id="2jQ-g8-aXu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Reserved Thesis" id="iwd-VT-ANS"/>
+                    <connections>
+                        <outlet property="userReservedTableView" destination="W2Q-PF-ZR7" id="lfE-t0-FaB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vc4-yw-hsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1007,7 +1020,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mI-Cd-ZPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3324" y="629"/>
+            <point key="canvasLocation" x="4263" y="605"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zYl-aG-p8J">
