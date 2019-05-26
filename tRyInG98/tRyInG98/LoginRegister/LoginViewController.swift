@@ -13,8 +13,9 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var loginTextField: AkiraTextField!
+    @IBOutlet weak var emailTextField: AkiraTextField!
     @IBOutlet weak var passwordTextField: AkiraTextField!
+    
     
     var ref:DatabaseReference!
     
@@ -55,8 +56,8 @@ class LoginViewController: UIViewController {
         }
     }*/
     
-    @IBAction func signInButtonTapped(_ sender: UIButton) {
-        guard let email = loginTextField.text else{return}
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        guard let email = emailTextField.text else{return}
         guard let password = passwordTextField.text else{return}
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             let userID = Auth.auth().currentUser?.uid
@@ -109,6 +110,8 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    
 }
 
 

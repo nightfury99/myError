@@ -18,10 +18,6 @@ class AdminReservedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +39,7 @@ class AdminReservedViewController: UIViewController {
                     //getting values
                     let chatObject = detail.value as? [String: AnyObject]
                     
-                    let title  = chatObject?["BookTitle"] as? String
+                    let title  = chatObject?["ThesisTitle"] as? String
                     let matricId  = chatObject?["MatricID"] as? String
                     let dateReserve = chatObject?["DateReserved"] as? String
                     let url = chatObject?["ThesisURL"] as? String

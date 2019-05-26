@@ -14,8 +14,6 @@ class HomeViewController: UIViewController {
     
     
     @IBOutlet weak var WelcomeLabel: UILabel!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUserData()
@@ -43,7 +41,7 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func AdminButtonTapped(_ sender: UIButton) {
+   /* @IBAction func AdminButtonTapped(_ sender: UIButton) {
         let alert = UIAlertController(title: "Navigating to Admin Page", message: "Please enter Admin password", preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.placeholder = "ID"
@@ -77,7 +75,7 @@ class HomeViewController: UIViewController {
         alert.addAction(cancel)
         alert.addAction(post)
         present(alert, animated: true, completion: nil)
-    }
+    }*/
     
     
 

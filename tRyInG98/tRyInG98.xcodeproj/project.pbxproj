@@ -14,7 +14,6 @@
 		524D04D3225315DC009D49F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D04D2225315DC009D49F4 /* ViewController.swift */; };
 		524D04D8225315DD009D49F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524D04D7225315DD009D49F4 /* Assets.xcassets */; };
 		524D04DB225315DD009D49F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524D04D9225315DD009D49F4 /* LaunchScreen.storyboard */; };
-		524E08EB2292EC6F0035355E /* AdminStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524E08EA2292EC6F0035355E /* AdminStoryboard.storyboard */; };
 		524E08ED2292FAA90035355E /* AddThesisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E08EC2292FAA90035355E /* AddThesisViewController.swift */; };
 		524ED2712294E95C00044427 /* ThesisListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ED2702294E95C00044427 /* ThesisListScreenViewController.swift */; };
 		524ED2762294F58400044427 /* ThesisListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ED2752294F58400044427 /* ThesisListTableViewCell.swift */; };
@@ -36,6 +35,8 @@
 		5253C9C42292521700B1C16F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253C9C32292521700B1C16F /* HomeViewController.swift */; };
 		5253C9C62292843A00B1C16F /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253C9C52292843A00B1C16F /* AdminHomeViewController.swift */; };
 		52716C682281D16000B6EE45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52716C672281D16000B6EE45 /* GoogleService-Info.plist */; };
+		52B43F33229A52720096DD16 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B43F32229A52720096DD16 /* MyCell.swift */; };
+		52B43F37229A53DF0096DD16 /* admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B43F36229A53DF0096DD16 /* admin.storyboard */; };
 		52F1A98F2291260B00B59B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F1A98D2291260B00B59B62 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +50,6 @@
 		524D04D7225315DD009D49F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524D04DA225315DD009D49F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		524D04DC225315DD009D49F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		524E08EA2292EC6F0035355E /* AdminStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminStoryboard.storyboard; sourceTree = "<group>"; };
 		524E08EC2292FAA90035355E /* AddThesisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThesisViewController.swift; sourceTree = "<group>"; };
 		524ED2702294E95C00044427 /* ThesisListScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThesisListScreenViewController.swift; sourceTree = "<group>"; };
 		524ED2752294F58400044427 /* ThesisListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThesisListTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 		5253C9C32292521700B1C16F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5253C9C52292843A00B1C16F /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
 		52716C672281D16000B6EE45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52B43F32229A52720096DD16 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		52B43F36229A53DF0096DD16 /* admin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = admin.storyboard; sourceTree = "<group>"; };
 		52F1A98E2291260B00B59B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73F537814FBF5F964F2435AD /* Pods-tRyInG98.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tRyInG98.release.xcconfig"; path = "Target Support Files/Pods-tRyInG98/Pods-tRyInG98.release.xcconfig"; sourceTree = "<group>"; };
 		99EC8B505F7F9B13BA428322 /* Pods_tRyInG98.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tRyInG98.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				524D04D9225315DD009D49F4 /* LaunchScreen.storyboard */,
 				52716C672281D16000B6EE45 /* GoogleService-Info.plist */,
 				524D04DC225315DD009D49F4 /* Info.plist */,
+				52B43F32229A52720096DD16 /* MyCell.swift */,
 			);
 			path = tRyInG98;
 			sourceTree = "<group>";
@@ -159,7 +162,7 @@
 		524E08E92292E8EE0035355E /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				524E08EA2292EC6F0035355E /* AdminStoryboard.storyboard */,
+				52B43F36229A53DF0096DD16 /* admin.storyboard */,
 				52F1A98D2291260B00B59B62 /* Main.storyboard */,
 			);
 			path = Storyboard;
@@ -295,8 +298,8 @@
 			files = (
 				524D04DB225315DD009D49F4 /* LaunchScreen.storyboard in Resources */,
 				5251DBFC229163920015D388 /* Bold.ttf in Resources */,
+				52B43F37229A53DF0096DD16 /* admin.storyboard in Resources */,
 				52716C682281D16000B6EE45 /* GoogleService-Info.plist in Resources */,
-				524E08EB2292EC6F0035355E /* AdminStoryboard.storyboard in Resources */,
 				5251DBFF229163A10015D388 /* Light.ttf in Resources */,
 				5251DC00229163A10015D388 /* Regular.ttf in Resources */,
 				524D04D8225315DD009D49F4 /* Assets.xcassets in Resources */,
@@ -316,7 +319,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-tRyInG98/Pods-tRyInG98-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Canvas/Canvas.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/Gemini/Gemini.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -328,7 +333,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Canvas.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gemini.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -375,6 +382,7 @@
 				524E08ED2292FAA90035355E /* AddThesisViewController.swift in Sources */,
 				52528EBA2298D6F900023107 /* RequestedUserTableViewCell.swift in Sources */,
 				522E3C562291397F0055CD5D /* LoginViewController.swift in Sources */,
+				52B43F33229A52720096DD16 /* MyCell.swift in Sources */,
 				5251DBF922915AEB0015D388 /* NavViewController.swift in Sources */,
 				524ED2712294E95C00044427 /* ThesisListScreenViewController.swift in Sources */,
 				524D04D3225315DC009D49F4 /* ViewController.swift in Sources */,

@@ -10,15 +10,21 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class ThesisListScreenViewController: UIViewController {
+class ThesisListScreenViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var ThesisTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searchActive : Bool = false
+    var filtered = [ThesisImage]()
     var ThesisS = [ThesisImage]()
+    var newSearchString = ""
+    
+    
     var ref:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +62,33 @@ class ThesisListScreenViewController: UIViewController {
             }
         }
     }
+    
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+        self.searchBar.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtered = ThesisS.filter {
+            $0.Title.localizedCaseInsensitiveContains(searchText)
+                || ($0.Author.localizedCaseInsensitiveContains(searchText))
+                || ($0.Course.localizedCaseInsensitiveContains(searchText))
+                || ($0.Year.localizedCaseInsensitiveContains(searchText))
+            
+        }
+        if(searchBar.text!.count == 0 && filtered.count == 0 ){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        let searchString = searchBar.text
+        newSearchString = searchString!
+        
+        ThesisTableView.reloadData()
+    }
 }
 
 
@@ -64,7 +97,12 @@ class ThesisListScreenViewController: UIViewController {
 extension ThesisListScreenViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ThesisS.count
+        if(searchActive) {
+            return filtered.count
+        } else {
+            return ThesisS.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -73,16 +111,33 @@ extension ThesisListScreenViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let history: ThesisImage
-        history = ThesisS[indexPath.row]
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ThesisIdentifier") as? ThesisListTableViewCell
         
-        cell?.ThesisTitleLabel.text = history.Title
-        cell?.ThesisAuthorLabel.text = history.Author
-        cell?.ThesisYearLabel.text = history.Year
-        cell?.ThesisCourseLabel.text = history.Course
+        if(searchActive){
+            let filter: ThesisImage
+            filter = filtered[indexPath.row]
+            
+            cell?.ThesisTitleLabel.text = filter.Title
+            cell?.ThesisAuthorLabel.text = filter.Author
+            cell?.ThesisYearLabel.text = filter.Year
+            cell?.ThesisCourseLabel.text = filter.Course
+            
+            cell?.thesisImage!.sd_setImage(with: URL(string: "\(filter.ThesisURL)" ), placeholderImage: UIImage(named: "placeholder.png"))
+        } else {
+            let history: ThesisImage
+            history = ThesisS[indexPath.row]
+            
+            cell?.ThesisTitleLabel.text = history.Title
+            cell?.ThesisAuthorLabel.text = history.Author
+            cell?.ThesisYearLabel.text = history.Year
+            cell?.ThesisCourseLabel.text = history.Course
+            
+            cell?.thesisImage!.sd_setImage(with: URL(string: "\(history.ThesisURL)" ), placeholderImage: UIImage(named: "placeholder.png"))
+        }
         
-        cell?.thesisImage!.sd_setImage(with: URL(string: "\(history.ThesisURL)" ), placeholderImage: UIImage(named: "placeholder.png"))
+        
         return cell!
     }
     

@@ -19,7 +19,8 @@ class ThesisInfoViewController: UIViewController {
     @IBOutlet weak var AuthorLabel: UILabel!
     @IBOutlet weak var CourseLabel: UILabel!
     @IBOutlet weak var YearLabel: UILabel!
-    @IBOutlet weak var DescriptionLabel: UILabel!
+    @IBOutlet weak var DescriptionLabel: UITextView!
+    
     
     //var ThesisS = [ThesisImage]()
     var ref: DatabaseReference!
@@ -42,7 +43,7 @@ class ThesisInfoViewController: UIViewController {
     
     func ReferenceToThesisInfo(){
         ref = Database.database().reference().child("Thesis").child("\(ThesisId)")
-        print("-------------(OKDOPFDGFOKDFPODKF)-------------")
+        print("-------------(Testing The Code)-------------")
         print("\(ThesisId)")
         ref.observe(DataEventType.value) { (snapshot) in
             if let Dict = snapshot.value as? [String: AnyObject]{
@@ -120,8 +121,7 @@ class ThesisInfoViewController: UIViewController {
     
     
     
-   
-    @IBAction func BorrowButton(_ sender: UIButton) {
+    @IBAction func borrowButtonTapped(_ sender: UIButton) {
         if ThesisNum <= 0{
             let AlertController = UIAlertController(title: "No Thesis Currently Available", message: "You Can Reserve Thesis", preferredStyle: .alert)
             let Cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) { (UIAlertAction) in
@@ -140,9 +140,7 @@ class ThesisInfoViewController: UIViewController {
     }
     
     
-    
-    
-    @IBAction func ReservedButton(_ sender: UIButton) {
+    @IBAction func reservedButtonTaped(_ sender: UIButton) {
         let Alert = UIAlertController(title: "Reserved This Thesis?", message: "Please Enter the Date for Reservation", preferredStyle: .alert)
         Alert.addTextField { (textField) in
             textField.placeholder = "Date"
@@ -179,6 +177,4 @@ class ThesisInfoViewController: UIViewController {
             }
         }
     }
-    
-    
 }

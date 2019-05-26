@@ -14,5 +14,7 @@ target 'tRyInG98' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Storage'
   pod 'SDWebImage'
+  pod 'Gemini'
+  pod 'Canvas'
 
 end

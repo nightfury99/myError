@@ -27,8 +27,6 @@ class RegisterViewController: UIViewController {
     }
     
     
-    
-    
     @IBAction func RegisterButtonTapped(_ sender: UIButton) {
         guard let MatricID = MatricNoTextField.text else {return}
         guard let Username = UsernameTextField.text else {return}
@@ -43,7 +41,6 @@ class RegisterViewController: UIViewController {
         self.navigationController?.pushViewController(desVC, animated: true)
         
     }
-    
     
     
     
@@ -70,6 +67,9 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        
+    }
     
     
     /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
