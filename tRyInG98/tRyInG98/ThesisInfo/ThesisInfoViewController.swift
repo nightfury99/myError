@@ -13,8 +13,7 @@ import SDWebImage
 class ThesisInfoViewController: UIViewController {
 
     @IBOutlet weak var thesisImage: UIImageView!
-    
-    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var TitleLabel: UITextView!
     @IBOutlet weak var ThesisID: UILabel!
     @IBOutlet weak var AuthorLabel: UILabel!
     @IBOutlet weak var CourseLabel: UILabel!
