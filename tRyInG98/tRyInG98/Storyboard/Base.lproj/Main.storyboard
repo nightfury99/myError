@@ -305,9 +305,9 @@
                         <viewLayoutGuide key="safeArea" id="k9u-tn-oA1"/>
                     </view>
                     <connections>
-                        <outlet property="EmailTextField" destination="9zK-HB-XkB" id="LBT-oI-yEo"/>
+                        <outlet property="EmailTextField" destination="ddH-o5-4WH" id="eIS-k0-Wxz"/>
                         <outlet property="MatricNoTextField" destination="UQV-YD-QzJ" id="eSk-ve-zOJ"/>
-                        <outlet property="PasswordTextField" destination="9zK-HB-XkB" id="tX2-6c-cet"/>
+                        <outlet property="PasswordTextField" destination="9zK-HB-XkB" id="Hjn-8f-iR3"/>
                         <outlet property="Status" destination="an8-6c-knA" id="PEu-Uj-DfW"/>
                         <outlet property="UsernameTextField" destination="ifb-fE-qbY" id="IbY-Lb-aAD"/>
                         <segue destination="wGA-qa-i6A" kind="show" identifier="goToLogin" id="B4d-49-6r1"/>
@@ -600,7 +600,6 @@
         <image name="sakura" width="1620" height="2880"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5ua-HA-OW7"/>
         <segue reference="B4d-49-6r1"/>
     </inferredMetricsTieBreakers>
 </document>

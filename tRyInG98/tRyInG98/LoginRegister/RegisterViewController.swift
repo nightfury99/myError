@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var PasswordTextField: AkiraTextField!
     
     
+    
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
