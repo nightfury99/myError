@@ -238,7 +238,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mb2-R2-GAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="591"/>
+            <point key="canvasLocation" x="-378" y="741"/>
         </scene>
         <!--Admin Home-->
         <scene sceneID="MxZ-KZ-GdM">
@@ -310,11 +310,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YhR-iP-zrp"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Admin Home" id="iFK-P0-3dE"/>
+                    <navigationItem key="navigationItem" title="Admin Home" id="iFK-P0-3dE">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="XJw-eK-6Gd">
+                            <color key="tintColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="adminButtonTapped:" destination="4Tf-0m-0ba" id="IfB-gD-grP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="r6u-iy-aN1" kind="show" identifier="huhu" id="y4Y-lX-iOu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhd-V1-xGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="1357"/>
+            <point key="canvasLocation" x="-103" y="1499"/>
         </scene>
         <!--Admin Approval View Controller-->
         <scene sceneID="QS4-tX-oAb">
@@ -410,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f7-cr-bSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423" y="2346"/>
+            <point key="canvasLocation" x="-794" y="2312"/>
         </scene>
         <!--Add Thesis View Controller-->
         <scene sceneID="S5t-3r-Ndc">
@@ -586,7 +596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqf-51-iGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1473" y="2328"/>
+            <point key="canvasLocation" x="-2038" y="2311"/>
         </scene>
         <!--Admin Reserved View Controller-->
         <scene sceneID="4Pl-0f-85G">
@@ -674,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwh-Hq-0b4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="2347"/>
+            <point key="canvasLocation" x="1884" y="2311"/>
         </scene>
         <!--Admin Delete View Controller-->
         <scene sceneID="ZP0-1D-lLo">
@@ -772,7 +782,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3E-nJ-dPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646" y="2348"/>
+            <point key="canvasLocation" x="646" y="2311"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HeE-2p-trz">

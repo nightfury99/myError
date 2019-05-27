@@ -18,8 +18,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var EmailTextField: AkiraTextField!
     @IBOutlet weak var PasswordTextField: AkiraTextField!
     
-    var ref: DatabaseReference!
     
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class RegisterViewController: UIViewController {
         
         CreateUser(withEmail: Email, Password: Password, Username: Username, MatricID: MatricID, CurrentStatus: CurrentStatus)
         let MainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let desVC = MainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        let desVC = MainStoryboard.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
         self.navigationController?.pushViewController(desVC, animated: true)
         
     }
@@ -62,8 +62,6 @@ class RegisterViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
                 print("Successfully signed up")
             })
-            
-            
         }
     }
     

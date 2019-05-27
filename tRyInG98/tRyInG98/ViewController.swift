@@ -141,9 +141,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func signOut() {
+        /*
         try! Auth.auth().signOut()
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
-        self.navigationController?.pushViewController(desVC, animated: true)
+        self.navigationController?.pushViewController(desVC, animated: true)*/
+        
+        try! Auth.auth().signOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let naviVC = storyboard.instantiateViewController(withIdentifier: "loginViewController")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = naviVC
     }
 }

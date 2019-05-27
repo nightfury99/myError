@@ -16,5 +16,8 @@ class AdminHomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func adminButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "huhu", sender: self)
+    }
+    
 }
